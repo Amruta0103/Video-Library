@@ -27,5 +27,6 @@
   margin: auto 1rem auto auto;
 }
 .nav-menu-option{
-  margin: 1rem
+  margin: 1rem;
+  text-decoration: none;
 }
