@@ -1,0 +1,31 @@
+:root{
+  --black: #000;
+  --white: #fff;
+  --light-gray: #d9d9d9;
+  --dark-gray:#313131;
+  --text: #030303;
+  --try: #f9f9f9;
+  --zero: 0;
+}
+.App {
+  text-align: center;
+  background-color: var(--dark-gray);
+  color: var(--try);
+}
+.nav{
+  display: flex;
+}
+.logo-box{
+  display: flex;
+}
+.logo{
+  height: 50px;
+  margin: 1rem
+}
+.nav-menu{
+  display: flex;
+  margin: auto 1rem auto auto;
+}
+.nav-menu-option{
+  margin: 1rem
+}
