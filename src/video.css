@@ -25,3 +25,8 @@
   display: block;
   margin: auto;
 }
+.videoOptions{
+  display: block;
+  z-index: 2;
+  /* visibility: hidden; */
+}

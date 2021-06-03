@@ -8,12 +8,16 @@ export default function Video(){
       <div className="duration-stamp">16:25</div>
       </div>
       <div className="description">
-      <h2>vid Name</h2>
-      <p>description</p>
+        <h2>vid Name</h2>
+        <p>description</p>
       </div>
-      {/* <div>
-        <img style={{ width: "1.5rem"}} src="./menu-dots-horizontal.svg" alt="menu"></img>
-      </div> */}
+      <div>
+        <img style={{width:"0.7rem"}} src="./imageStocks/menu-dots-vertical.svg" alt="menu"></img>
+      </div>
+      <div className="videoOptions">
+        <div>Save Video <img style={{ width: "1rem"}} src="./imageStocks/bookmark-regular.svg" alt="menu"></img></div>
+        <div>Liked<img style={{ width: "1rem"}} src="./imageStocks/heart-regular.svg" alt="menu"></img></div>
+      </div>
     </div>
   );
 }
