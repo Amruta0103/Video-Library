@@ -9,7 +9,7 @@
 }
 .App {
   text-align: center;
-  background-color: var(--dark-gray);
+  background-color: var(--text);
   color: var(--try);
 }
 .nav{

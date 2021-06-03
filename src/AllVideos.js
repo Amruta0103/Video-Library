@@ -2,7 +2,7 @@ import Video from "./video";
 
 export default function AllVideos(){
   return(
-    <div>
+    <div className="allVideos">
       <Video />
       <Video />
       <Video />

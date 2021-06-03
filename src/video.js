@@ -11,14 +11,14 @@ export default function Video(){
         <h2>vid Name</h2>
         <p>description</p>
       </div>
-      <div>
+      <div class="trial">
         <div className="menu">
           <img style={{width:"0.7rem"}} src="./imageStocks/menu-dots-vertical.svg" alt="menu"></img>
         </div>
-        <div className="videoOptions">
-          <div>Save Video <img style={{ width: "1rem"}} src="./imageStocks/bookmark-regular.svg" alt="menu"></img></div>
-          <div>Liked<img style={{ width: "1rem"}} src="./imageStocks/heart-regular.svg" alt="menu"></img></div>
-        </div>
+        <ul className="videoOptions">
+          <li className="videoOptionItem"><span style={{margin:"auto"}}>Save</span><img style={{ width: "1rem", margin:"auto"}} src="./imageStocks/bookmark-regular.svg" alt="menu"></img></li>
+          <li className="videoOptionItem"><span style={{margin:"auto"}}>Like</span><img style={{ width: "1rem", margin:"auto"}} src="./imageStocks/heart-regular.svg" alt="menu"></img></li>
+        </ul>
       </div>
     </div>
   );
