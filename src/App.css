@@ -1,16 +1,18 @@
 :root{
   --black: #000;
   --white: #fff;
-  --light-gray: #d9d9d9;
+  --text: #eeeded;
   --dark-gray:#313131;
-  --text: #030303;
+  --background: #030303;
   --try: #f9f9f9;
   --zero: 0;
+  --grad-dark: #323232;
+  --grad-light: #9b9b9b;
 }
 .App {
   text-align: center;
-  background-color: var(--text);
-  color: var(--try);
+  background-color: var(--background);
+  color: var(--text);
 }
 .nav{
   display: flex;
