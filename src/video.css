@@ -1,44 +1,12 @@
-.navBar {
-  position: relative;
-}
-
-.navBar button {
-  position: fixed;
-  left: 40px;
-  top: 40px;
-  z-index: 10;
-  cursor: pointer;
-}
-.menuNav {
-  
-  list-style: none;
-  position: fixed;
-  top: 0;
-  background: darkcyan;
-  left: 0;
-  bottom: 0;
-  height: 100vh;
-  width: 0;
-  
-  max-width: 290px;
-  z-index: 9;
-}
-
-/* .menuNav.showMenu { */
-  /* width: 100%; */
-/* } */
-.menuNav li:first-child {
-  margin-top: 7rem;
-}
 .allVideos{
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  align-content: center;
 }
 .Video{
   display: flex;
-  width: 45%;
-  /* border: 1px solid white; */
-  /* background-color: var(--grad-dark); */
+  width: fit-content;
   border-radius: 1rem;
   margin: 1rem auto;
   padding: 0.5rem;
@@ -49,7 +17,6 @@
   height: 150px;
   width: 300px;
   background-color: var(--background);
-  /* border: 1px solid white; */
   border-radius: 1rem;
   margin: auto 0.5rem;
   position: relative;
@@ -78,7 +45,7 @@
   margin: auto;
 }
 .menu{
-  position:absolute;
+  position: relative;
   right: 0.5rem;
   top: 0.5rem;
   display: block;
@@ -87,9 +54,17 @@
   border: 1px transparent;
   padding: 0;
   transform: scale(0.9);
+  margin: 0;
+  width:fit-content;
 }
 .trial{
   position: relative;
+  width: 0;
+  /* padding: 1rem; */
+}
+.videoOptionMenuLogo{
+  width: 0.6rem;
+  margin: 0;
 }
 .videoOptions{
   overflow: hidden;
@@ -97,9 +72,10 @@
   list-style: none;
   padding-inline-start: 0;
   position: relative;
-  top: 2rem;
+  top: 0;
+  right: 5rem;
   background-color: black;
-  transition: 0.3s;
+  /* transform: translateX(-100%); */
   box-shadow: 3px 3px rgba(0, 0, 0, 0.05);
   flex-direction: column;
   width: fit-content;
@@ -108,9 +84,10 @@
   border-radius: 1rem;
 }
 .openMenu{
-  /* display: b; */
   position: relative;
   visibility: hidden;
+  width:fit-content;
+  transition: 0.2s ease;
 }
 .videoOptionItem{
   padding: 0.3rem;

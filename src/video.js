@@ -18,7 +18,7 @@ export default function Video(){
       </div>
       <div className="trial">
         <button onClick={()=>handleToggle()} className="menu">
-          <img className="videoOptionItemLogo" src="./imageStocks/menu-dots-vertical.svg" alt="menu"></img>
+          <img className="videoOptionMenuLogo" src="./imageStocks/menu-dots-vertical.svg" alt="menu"></img>
         </button>
         <ul className={`videoOptions ${openMenu ? "openMenu":""}`}>
           <li className="videoOptionItems"><span>Save</span><img className="videoOptionItemLogo" src="./imageStocks/bookmark-regular.svg" alt="menu"></img></li>
