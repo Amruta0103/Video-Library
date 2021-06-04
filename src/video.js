@@ -2,7 +2,7 @@ import "./video.css"
 import { useState } from "react";
 
 export default function Video(){
-  const [ openMenu, setOpenMenu ] = useState(false);
+  const [ openMenu, setOpenMenu ] = useState(true);
   const handleToggle = () => {
     setOpenMenu(prev => !prev)
   }
@@ -12,18 +12,18 @@ export default function Video(){
       <img src="./imageStocks/Selfie.png" className="thumbnail" alt="thumbnail"></img>
       <div className="duration-stamp">16:25</div>
       </div>
-      <div className="description">
-        <h2>vid Name</h2>
-        <p>description</p>
+      <div className="info-box">
+        <h2> Video Title</h2>
+        <p className="description" >abcdefghijklmnopqrstuvwxyz1234567891011</p>
       </div>
       <div className="trial">
-        <button  onClick={()=>handleToggle()} className="menu">
-          <img style={{width:"0.7rem"}} src="./imageStocks/menu-dots-vertical.svg" alt="menu"></img>
+        <button onClick={()=>handleToggle()} className="menu">
+          <img className="videoOptionItemLogo" src="./imageStocks/menu-dots-vertical.svg" alt="menu"></img>
         </button>
-        <ul className={`videoOptions${openMenu?"showMenu":""}`}>
-          <li className="videoOptionItems"><span style={{margin:"auto"}}>Save</span><img style={{ width: "1rem", margin:"auto"}} src="./imageStocks/bookmark-regular.svg" alt="menu"></img></li>
+        <ul className={`videoOptions ${openMenu ? "openMenu":""}`}>
+          <li className="videoOptionItems"><span>Save</span><img className="videoOptionItemLogo" src="./imageStocks/bookmark-regular.svg" alt="menu"></img></li>
           
-          <li className="videoOptionItem"><span style={{margin:"auto"}}>Like</span><img style={{ width: "1rem", margin:"auto"}} src="./imageStocks/heart-regular.svg" alt="menu"></img></li>
+          <li className="videoOptionItem"><span style={{margin:"auto"}}>Like</span><img className="videoOptionItemLogo" src="./imageStocks/heart-regular.svg" alt="menu"></img></li>
         </ul>
       </div>  
     </div>
