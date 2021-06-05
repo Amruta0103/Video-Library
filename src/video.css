@@ -60,7 +60,6 @@
 .trial{
   position: relative;
   width: 0;
-  /* padding: 1rem; */
 }
 .videoOptionMenuLogo{
   width: 0.6rem;
@@ -75,14 +74,12 @@
   top: 0;
   right: 5rem;
   background-color: black;
-  /* transform: translateX(-100%); */
   box-shadow: 3px 3px rgba(0, 0, 0, 0.05);
   flex-direction: column;
   width: fit-content;
   text-align: center;
   padding: 1rem;
   border-radius: 1rem;
-  transition: all 2s linear 1s;
 }
 .openMenu{
   position: relative;
