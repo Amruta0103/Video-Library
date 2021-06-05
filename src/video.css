@@ -82,6 +82,7 @@
   text-align: center;
   padding: 1rem;
   border-radius: 1rem;
+  transition: all 2s linear 1s;
 }
 .openMenu{
   position: relative;
