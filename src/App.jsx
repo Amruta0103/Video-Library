@@ -14,10 +14,10 @@ function App() {
           <h1>my vid lib</h1>
         </div>
         <div className="nav-menu">
-          <Link to="/" ><button className="nav-menu-option" >BROWSE</button></Link>
-          <Link to="/watchLater" ><button className="nav-menu-option" >WATCH LATER</button></Link>
-          <Link to="/savedVideos" ><button className="nav-menu-option" >SAVED</button></Link>
-          <Link to="/likedVideos" ><button className="nav-menu-option" >LIKED</button></Link>
+          <Link to="/" ><button className="nav-menu-option">BROWSE</button></Link>
+          <Link to="/watchLater" ><button className="nav-menu-option">WATCH LATER</button></Link>
+          <Link to="/savedVideos" ><button className="nav-menu-option">SAVED</button></Link>
+          <Link to="/likedVideos" ><button className="nav-menu-option">LIKED</button></Link>
         </div>
       </nav>
 
@@ -27,7 +27,6 @@ function App() {
         <Route path="/savedVideos" element={<Saved />} />
         <Route path="/watchLater" element={<WatchLater />} />
       </Routes>
-
     </div>
   );
 }

@@ -16,6 +16,11 @@
 }
 .nav{
   display: flex;
+  position: sticky;
+  top: 0rem;
+  z-index: 3;
+  background-color: black;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.95);
 }
 .logo-box{
   display: flex;
@@ -27,8 +32,14 @@
 .nav-menu{
   display: flex;
   margin: auto 1rem auto auto;
+  cursor: none;
 }
 .nav-menu-option{
   margin: 1rem;
   text-decoration: none;
+  background-color: transparent;
+  border: 1px solid black;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: bolder;
 }

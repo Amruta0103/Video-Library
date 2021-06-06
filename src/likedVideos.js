@@ -31,7 +31,7 @@ export default function Liked(){
             </li>
             <li className="videoOptionItem">
               <button onClick={(like.find((items)=> items.id===item.id)) ? (()=>setLike((prev)=> prev.filter((items) => item !== items))) : (()=>setLike((items)=> [...items, item]))} className="videoOptionButton">
-                {like.find((items)=> items.id===item.id) ? "Liked" : "Like"}
+                <span style={{width: "2rem"}}>{like.find((items)=> items.id===item.id) ?"Liked": "Like"}</span>
                 <img className="videoOptionItemLogo" src={like.find((items)=> items.id===item.id) ?"./imageStocks/heart-solid.svg": "./imageStocks/heart-regular.svg"} alt="menu"></img>
               </button>
             </li>
