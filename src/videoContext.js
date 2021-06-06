@@ -12,6 +12,6 @@ export function VideoProvider({ children }){
   );
 }
 
-export default function useVideos(){
+export function useVideos(){
   return useContext(VideoContext);
 }

@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { VideoContext } from "./videoContext";
+import { useVideos } from "./videoContext";
 
 export default function Liked(){
-  const { like, setLike } = VideoContext();
+  const { save, setSave, like, setLike } = useVideos();
   const [ openMenu, setOpenMenu ] = useState(true);
   const handleToggle = () => {
     setOpenMenu(prev => !prev)
   }
   return(
     <div className="Liked">
-      {like.map((item)=>{
+      {like.map((item)=>(
         <div className="Video">
         <div className="thumbnail-box">
         <img src={item.image} className="thumbnail" alt="thumbnail"></img>
@@ -24,15 +24,21 @@ export default function Liked(){
             <img className="videoOptionMenuLogo" src="./imageStocks/menu-dots-vertical.svg" alt="menu"></img>
           </button>
           <ul className={`videoOptions ${openMenu ? "openMenu":""}`}>
-            <li onClick={(like.find((items)=> items.id===item.id)) ? 
-                (()=>setLike((prev)=> prev.filter((items) => item !== items))) : 
-                (()=>setLike((items)=> [...items, item]))} className="videoOptionItems"><span>Save</span><img className="videoOptionItemLogo" src="./imageStocks/bookmark-regular.svg" alt="menu"></img></li>
-            
-            <li className="videoOptionItem"><span style={{margin:"auto"}}>Like</span><img className="videoOptionItemLogo" src="./imageStocks/heart-regular.svg" alt="menu"></img></li>
+            <li className="videoOptionItems">
+              <button onClick={(save.find((items)=> items.id===item.id)) ? (()=>setSave((prev)=> prev.filter((items) => item !== items))) : (()=>setSave((items)=> [...items, item]))} className="videoOptionButton">
+                {save.find((items)=> items.id===item.id) ?"Saved": "Save"}
+                <img className="videoOptionItemLogo" src={save.find((items)=> items.id===item.id) ?"./imageStocks/bookmark-solid.svg": "./imageStocks/bookmark-regular.svg"} alt="menu"></img></button>
+            </li>
+            <li className="videoOptionItem">
+              <button onClick={(like.find((items)=> items.id===item.id)) ? (()=>setLike((prev)=> prev.filter((items) => item !== items))) : (()=>setLike((items)=> [...items, item]))} className="videoOptionButton">
+                {like.find((items)=> items.id===item.id) ? "Liked" : "Like"}
+                <img className="videoOptionItemLogo" src={like.find((items)=> items.id===item.id) ?"./imageStocks/heart-solid.svg": "./imageStocks/heart-regular.svg"} alt="menu"></img>
+              </button>
+            </li>
           </ul>
         </div>  
       </div>
-      })}
+      ))}
     </div>
   );
 }
