@@ -14,15 +14,17 @@ export default function Video({ item }){
         <h2 className="description">{item.name}</h2>
         <p className="description" >abcdefghijklmnopqrstuvwxyz1234567891011</p>
         
-        <button onClick={(save.find((items)=> items.id===item.id)) ? (()=>setSave((prev)=> prev.filter((items) => item !== items))) : (()=>setSave((items)=> [...items, item]))}>
-          <span style={{width: "2rem"}}>{save.find((items)=> items.id===item.id) ?"Saved": "Save"}</span>
-          <img className="videoOptionItemLogo" src={save.find((items)=> items.id===item.id) ? "./imageStocks/bookmark-solid.svg": "./  imageStocks/bookmark-regular.svg"} alt="menu"></img>
-        </button>
-        
-        <button onClick={(like.find((items)=> items.id===item.id)) ? (()=>setLike((prev)=> prev.filter((items) => item !== items))) : (()=>setLike((items)=> [...items, item]))}>
-          <span style={{width: "2rem"}}>{like.find((items)=> items.id===item.id) ?"Liked": "Like"}</span>
-          <img className="videoOptionItemLogo" src={like.find((items)=> items.id===item.id) ? "./imageStocks/heart-solid.svg" : "./imageStocks/heart-regular.svg"} alt="menu"></img>
-        </button>
+        <div className="videoOptions">
+          <button className="videoOptionButton" onClick={(save.find((items)=> items.id===item.id)) ? (()=>setSave((prev)=> prev.filter((items) => item !== items))) : (()=>setSave((items)=> [...items, item]))}>
+            <span style={{width: "2rem"}}>{save.find((items)=> items.id===item.id) ?"Saved": "Save"}</span>
+            <img className="videoOptionItemLogo" src={save.find((items)=> items.id===item.id) ? "./imageStocks/bookmark-solid.svg": "./imageStocks/bookmark-regular.svg"} alt="menu"></img>
+          </button>
+          
+          <button className="videoOptionButton" onClick={(like.find((items)=> items.id===item.id)) ? (()=>setLike((prev)=> prev.filter((items) => item !== items))) : (()=>setLike((items)=> [...items, item]))}>
+            <span style={{width: "2rem"}}>{like.find((items)=> items.id===item.id) ?"Liked": "Like"}</span>
+            <img className="videoOptionItemLogo" src={like.find((items)=> items.id===item.id) ? "./imageStocks/heart-solid.svg" : "./imageStocks/heart-regular.svg"} alt="menu"></img>
+          </button>
+        </div>
       </div>
       {/* <div className="trial">
         <button onClick={()=>setOpen(prev => !prev )} className="menu">
