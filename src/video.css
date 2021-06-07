@@ -11,11 +11,12 @@
   margin: 1rem auto;
   padding: 0.5rem;
   position: relative;
+  /* color: rgb(219, 219, 36); */
   background-image: linear-gradient(45deg, var(--grad-light), var(--grad-dark));
 }
 .thumbnail-box{
   height: 150px;
-  width: 300px;
+  width: 250px;
   background-color: var(--background);
   border-radius: 1rem;
   margin: auto 0.5rem;
@@ -28,10 +29,12 @@
   position: absolute;
   right: 1rem;
   bottom: 0.5rem;
+  background-color: rgba(0,0,0,0.8);
 }
 .info-box{
   display: block;
-  margin: auto;
+  margin: 2rem auto;
+  height:max-content;
 }
 .description{
   -webkit-margin-before: 0;
@@ -44,42 +47,15 @@
   white-space: nowrap;
   margin: auto;
 }
-.menu{
-  position: relative;
-  right: 0.5rem;
-  top: 0.5rem;
-  display: block;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px transparent;
-  padding: 0;
-  transform: scale(0.9);
-  margin: 0;
-  width:fit-content;
-}
-.trial{
-  position: relative;
-  width: 0;
-}
-.videoOptionMenuLogo{
-  width: 0.6rem;
-  margin: 0;
-}
 .videoOptions{
-  overflow: hidden;
-  display: block;
+  display: flex;
   list-style: none;
   padding-inline-start: 0;
-  position: relative;
-  top: 0;
-  right: 6rem;
-  background-color: black;
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.05);
-  flex-direction: column;
-  width: 4rem;
   text-align: center;
-  padding: 1rem;
   border-radius: 1rem;
+  margin: auto;
+  position: relative;
+  top: 2rem;
 }
 .openMenu{
   position: relative;
@@ -87,13 +63,11 @@
   width:fit-content;
   transition: 0.2s ease;
 }
-.videoOptionItem{
-  list-style: none;
-}
 .videoOptionButton{
   margin: auto;
   color: var(--text);
-  background-color: black;
+  /* color: black; */
+  background-color: transparent;
   display: flex;
   align-items: center;
   cursor: pointer;
